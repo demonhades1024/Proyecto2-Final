@@ -172,13 +172,52 @@ transition: all 0.5s;
 {
     width: 50px;
     margin: 30px;
-    transform: rotate(10deg);
-    animation-name:iconrss ;
-    animation-duration: 3s;
-    animation-direction:initial;
-
+   
+    
 }
 
+
+
+
+
+.seccion3-icon-RSS article img:hover
+{
+    animation-name: balanceo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease;
+    cursor: grab;
+    
+    
+    
+}
+
+@keyframes balanceo
+{
+    
+    0%{
+       
+        transform: rotate(-15deg)  scale(2);
+        
+    }
+    25%{
+        
+        transform: rotate(15deg) scale(2);
+    }
+
+    50%{
+        
+        transform: rotate(-15deg) scale(2);
+    }
+    75%
+    {
+        transform: rotate(15deg) scale(2);
+    }
+    100%{
+        
+        transform: rotate(-15deg) scale(2);
+    }
+}
 
 main footer
 {
