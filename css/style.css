@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing:border-box;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 body
 {
@@ -13,6 +13,18 @@ body
     min-width: 360px;
     font-size: 18px;
 }
+
+h1 
+{
+    font-size: 48px;
+}
+
+h2
+{
+    font-size: 32px;
+}
+
+
 main
 {
     position: relative;
@@ -49,9 +61,9 @@ main
   
 }
 
-.header ul li
+.header ul li 
 {
-    text-decoration: none;
+    
     list-style: none;
     padding: 10px;
     transition: all 0.5s;
@@ -59,6 +71,15 @@ main
     z-index: 100;
     
 }
+
+.header ul li a
+{
+
+    text-decoration: none;
+    color:rgb(39, 38, 38) ;
+
+}
+
 .header ul li:nth-child(2):hover
 {
     border-radius: 0px 40px 40px 0px;
@@ -69,11 +90,14 @@ main
 
 .header ul li:hover
 {
-    background-color:#f154d2;
-    color:#fbfbfb;
+    background-color:#af599e;
+    
    
 }
-
+.header ul li a:hover
+{
+    color:#fbfbfb;
+}
 
 /* seccion a modificar con @media query */
 .seccion1
@@ -83,15 +107,16 @@ display: flex;
 margin-top: 120px;
 justify-content: center;
 align-items: center;
-flex-wrap: wrap;
 transition: all 0.5s;
 }
 .seccion1 img
 {
-    border-radius:50%; 
-    max-width: 300px;
+    
     margin-bottom: 20px;
+    clip-path: polygon(50% 0%, 84.5% 15.5%, 100% 50%, 90.75% 74.5%, 50% 100%, 20% 80%, 0% 50%, 15.5% 15.5%);
+   
 }
+
 
 /* seccion a modificar con @media query */
 .seccion1 article 
@@ -105,33 +130,52 @@ transition: all 0.5s;
 
 .seccion1 article p 
 {
-    max-width: 400px;
+    max-width: 600px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px;
 
 }
-
+/* boton descarga curriculum vitae */
 .seccion1 article .btn-cv
 {
     background-color:#af599e;
-    padding: 10px;
+    padding: 20px;
     border-radius:10px;
-    margin-top: 10px;
+    margin-top: 15px;
     display: inline-block;
     border-radius: 40px 40px 40px 40px;
     color:#fbfbfb;
     text-decoration: none;
     text-align: center; 
     transition: all 0.5s;
-    max-width: 150px;
-    font-size: 0.7em;
+    font-size: 1em;
+    animation-name: resplandor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
     
 }
+
 .seccion1 article .btn-cv:hover
 {
     background-color:#f31ac8;
     box-shadow:0px 5px 10px 0px #201f1f ;
     color:rgb(0, 0, 0);
+    animation-name: balanceo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease;
+    transition: 0.3s;
     
 }
+
+@keyframes resplandor {
+    0%{box-shadow: 0px 0px 15px 10px rgb(224, 30, 182);}
+    50%{box-shadow: 0px 0px 0px 0px rgb(224, 30, 182);}
+    100%{box-shadow: 0px 0px 15px 10px rgb(224, 30, 182);}
+    }
 
 .seccion2
 {
@@ -144,7 +188,7 @@ transition: all 0.5s;
     
     text-align: center;
     max-width: 600px;
-    padding: 20px;
+    padding: 10px;
     background-color:rgba(175, 89, 158, 0.3);
     border-radius:10px;
 }
@@ -164,10 +208,7 @@ transition: all 0.5s;
     
     
 }
-.seccion3-icon-RSS article
-{
-    
-}
+
 .seccion3-icon-RSS article img
 {
     width: 50px;
@@ -186,12 +227,10 @@ transition: all 0.5s;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function:ease;
-    cursor: grab;
-    
-    
-    
+    cursor: grab;  
 }
 
+/* animacion de imagenes RSS */
 @keyframes balanceo
 {
     
@@ -219,6 +258,7 @@ transition: all 0.5s;
     }
 }
 
+
 main footer
 {
     background-color:#af599e;
@@ -229,3 +269,25 @@ main footer
     color: #fbfbfb;
     
 }
+
+@media (max-width:1024px)
+{
+    .seccion1
+    {
+       flex-direction: column;
+        
+    }
+.header
+{
+    justify-content: space-between;
+}
+h1
+{
+    font-size: 32px;
+}
+
+
+}
+
+
+
