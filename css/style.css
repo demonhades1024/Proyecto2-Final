@@ -65,38 +65,26 @@ main
 {
     
     list-style: none;
-    padding: 10px;
-    transition: all 0.5s;
-    position: relative;
-    z-index: 100;
+    
+    
+    
     
 }
 
 .header ul li a
 {
-
+    padding: 10px;
     text-decoration: none;
     color:rgb(39, 38, 38) ;
+    display: inline-block;
+    transition: all 0.3s;
 
 }
 
-.header ul li:nth-child(2):hover
+.header ul .activo
 {
-    border-radius: 0px 40px 40px 0px;
-}
-.header ul li:nth-child(1):hover{
-    border-radius: 40px 0px 0px 40px;
-}
-
-.header ul li:hover
-{
+    border-radius: 40px;
     background-color:#af599e;
-    
-   
-}
-.header ul li a:hover
-{
-    color:#fbfbfb;
 }
 
 /* seccion a modificar con @media query */
@@ -109,6 +97,8 @@ justify-content: center;
 align-items: center;
 transition: all 0.5s;
 }
+
+
 .seccion1 img
 {
     
@@ -267,7 +257,6 @@ main footer
     text-align: center;
     font-size: 28px;
     color: #fbfbfb;
-    
 }
 
 @media (max-width:1024px)
